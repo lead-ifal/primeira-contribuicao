@@ -13,3 +13,11 @@ Cada contribuição deve conter apenas um arquivo, respeitando o formato JSON. O
   "email": "EMAIL COMPLETO"
 }
 ```
+
+## Coleta de informações usando `jq`
+
+### Número de contribuições por turma
+
+```
+jq -s '.[].turma' *.json | tr '[:upper:]' '[:lower:]' | tr -d '°' | sort | uniq -ic
+```
