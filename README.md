@@ -19,11 +19,17 @@ Cada contribuição deve conter apenas um arquivo, respeitando o formato JSON. O
 ### Número de contribuições por turma
 
 ```sh
-jq -s '.[].turma' *.json | tr '[:upper:]' '[:lower:]' | tr -d '°' | sort | uniq -ic
+jq -s '.[].turma' *.json | tr '[:upper:]' '[:lower:]' | tr -d '°º' | sort | uniq -ic
 ```
 
 ### Número de contribuições por ano início
 
 ```sh
 jq -s '.[].ano_inicio' *.json | tr '[:upper:]' '[:lower:]' | tr -d '°' | sort | uniq -ic
+```
+### Lista de e-mails por turma
+
+Por exemplo, a turma 923
+```sh
+jq -s '.[] | select(.turma == "923") | .email' *.json | tr '[:upper:]' '[:lower:]' | sort
 ```
