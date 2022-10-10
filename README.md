@@ -14,6 +14,10 @@ Cada contribuição deve conter apenas um arquivo, respeitando o formato JSON. O
 }
 ```
 
+## Próximos passos
+
+https://abre.ai/hacktoberfest-ifal-ara
+
 ## Coleta de informações usando `jq`
 
 ### Número de contribuições por turma
