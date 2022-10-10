@@ -18,6 +18,12 @@ Cada contribuição deve conter apenas um arquivo, respeitando o formato JSON. O
 
 ### Número de contribuições por turma
 
-```
+```sh
 jq -s '.[].turma' *.json | tr '[:upper:]' '[:lower:]' | tr -d '°' | sort | uniq -ic
+```
+
+### Número de contribuições por ano início
+
+```sh
+jq -s '.[].ano_inicio' *.json | tr '[:upper:]' '[:lower:]' | tr -d '°' | sort | uniq -ic
 ```
