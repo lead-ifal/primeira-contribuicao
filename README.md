@@ -10,6 +10,6 @@ Cada contribuição deve conter apenas um arquivo, respeitando o formato JSON. O
   "turma": "SUA TURMA",
   "curso": "CURSO",
   "ano_inicio": "ANO DE INICIO",
-  "email": "EMAIL COMPLETO",
+  "email": "EMAIL COMPLETO"
 }
 ```
